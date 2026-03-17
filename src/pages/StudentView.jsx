@@ -92,7 +92,7 @@ function LessonsSection({ title, lessonGroups }) {
   )
 }
 
-export default function StudentView({ accessLevel }) {
+export default function StudentView({ accessLevel, clearAccess }) {
   const [classes, setClasses] = useState([])
   const [selectedClassId, setSelectedClassId] = useState(
     () => localStorage.getItem('student_class_id') || ''
@@ -153,14 +153,22 @@ export default function StudentView({ accessLevel }) {
             <h1 className="text-2xl font-bold text-gray-900">📚 השיעורים שלי</h1>
             <p className="text-sm text-gray-500">בחר כיתה ותאריך כדי לראות את השיעורים</p>
           </div>
-          {(accessLevel === 'teacher' || accessLevel === 'admin') && (
-            <Link
-              to="/teacher"
-              className="text-xs text-gray-400 hover:text-indigo-500 transition border border-gray-200 rounded-lg px-3 py-1.5 shrink-0"
+          <div className="flex items-center gap-2">
+            {(accessLevel === 'teacher' || accessLevel === 'admin') && (
+              <Link
+                to="/teacher"
+                className="text-xs text-gray-400 hover:text-indigo-500 transition border border-gray-200 rounded-lg px-3 py-1.5 shrink-0"
+              >
+                כניסת מורה ←
+              </Link>
+            )}
+            <button
+              onClick={clearAccess}
+              className="text-xs text-gray-400 hover:text-red-500 transition border border-gray-200 rounded-lg px-3 py-1.5 shrink-0"
             >
-              כניסת מורה ←
-            </Link>
-          )}
+              התנתקות
+            </button>
+          </div>
         </div>
       </div>
 

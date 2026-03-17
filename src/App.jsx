@@ -14,7 +14,7 @@ function AccessRoute({ accessLevel, required, children, fallback }) {
 }
 
 export default function App() {
-  const { accessLevel, loading, publicSettings, verifyCode, requestFreeAccess } = useAccess()
+  const { accessLevel, loading, publicSettings, verifyCode, requestFreeAccess, clearAccess } = useAccess()
 
   if (loading) {
     return (
@@ -31,12 +31,12 @@ export default function App() {
       <Routes>
         <Route path="/" element={
           <AccessRoute accessLevel={accessLevel} required="student" fallback={landing}>
-            <StudentView accessLevel={accessLevel} />
+            <StudentView accessLevel={accessLevel} clearAccess={clearAccess} />
           </AccessRoute>
         } />
         <Route path="/teacher" element={
           <AccessRoute accessLevel={accessLevel} required="teacher" fallback={landing}>
-            <TeacherDashboard accessLevel={accessLevel} verifyCode={verifyCode} />
+            <TeacherDashboard accessLevel={accessLevel} verifyCode={verifyCode} clearAccess={clearAccess} />
           </AccessRoute>
         } />
         <Route path="/system-admin" element={

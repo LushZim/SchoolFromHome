@@ -31,7 +31,7 @@ function groupByTime(lessons) {
   return Object.entries(groups).sort(([a], [b]) => a.localeCompare(b))
 }
 
-export default function TeacherDashboard({ accessLevel, verifyCode }) {
+export default function TeacherDashboard({ accessLevel, verifyCode, clearAccess }) {
   const [classes, setClasses] = useState([])
   const [selectedClassId, setSelectedClassId] = useState(
     () => localStorage.getItem('teacher_class_id') || ''
@@ -188,6 +188,12 @@ export default function TeacherDashboard({ accessLevel, verifyCode }) {
             >
               ← תלמידים
             </Link>
+            <button
+              onClick={clearAccess}
+              className="text-xs text-gray-400 hover:text-red-500 transition border border-gray-200 rounded-lg px-3 py-1.5"
+            >
+              התנתקות
+            </button>
           </div>
         </div>
       </div>
