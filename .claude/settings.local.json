@@ -15,7 +15,8 @@
       "Bash(cp \"$WRONG/src/pages/LandingPage.jsx\" \"$CORRECT/src/pages/LandingPage.jsx\")",
       "Bash(cp \"$WRONG/src/pages/SystemAdminPage.jsx\" \"$CORRECT/src/pages/SystemAdminPage.jsx\")",
       "Bash(cp \"$WRONG/access-codes-setup.sql\" \"$CORRECT/access-codes-setup.sql\")",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(\"/Users/ayala.zimner/Claude Code/School from Home/.npmrc\")"
     ]
   }
 }
