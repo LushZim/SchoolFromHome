@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(printf '\\\\n')",
+      "Bash(npm install:*)",
+      "Bash(\"/Users/ayala.zimner/Claude Code/School from Home/.gitignore\")",
+      "mcp__Claude_Preview__preview_start",
+      "WebFetch(domain:class-link-flow.base44.app)",
+      "Bash(supabase --version)",
+      "Bash(curl -s -o /tmp/sql_result.json -w \"%{http_code}\" -X POST \"https://api.supabase.com/v1/projects/bpfilfuluqpdgtalijqw/database/query\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJwZmlsZnVsdXFwZGd0YWxpanF3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MzY3NjE4NSwiZXhwIjoyMDg5MjUyMTg1fQ.36GKOOejwV_vzWwY4qYWQkFYk5pUACsIxa9v1zgl9tw\" -H \"Content-Type: application/json\" -d '{\"\"query\"\": \"\"select 1\"\"}')",
+      "Bash(WRONG=\"/Users/ayala.zimner/Claude/Code School from Home\" CORRECT=\"/Users/ayala.zimner/Claude Code/School from Home\")",
+      "Bash(__NEW_LINE_12e4a9c2e175544f__ cp:*)",
+      "Bash(cp \"$WRONG/src/components/CodeEntryModal.jsx\" \"$CORRECT/src/components/CodeEntryModal.jsx\")",
+      "Bash(cp \"$WRONG/src/pages/LandingPage.jsx\" \"$CORRECT/src/pages/LandingPage.jsx\")",
+      "Bash(cp \"$WRONG/src/pages/SystemAdminPage.jsx\" \"$CORRECT/src/pages/SystemAdminPage.jsx\")",
+      "Bash(cp \"$WRONG/access-codes-setup.sql\" \"$CORRECT/access-codes-setup.sql\")",
+      "Bash(npm run:*)"
+    ]
+  }
+}
